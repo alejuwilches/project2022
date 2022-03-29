@@ -8,11 +8,12 @@ import javax.persistence.Id;
 @Entity
 public class Usuario implements Serializable {
 @Id
-private Integer id;
+private Long id;
 private String nombre;
 private String correo;
 private Integer telefono;
 private Integer edad;
+private String pais;
 private String direccion;
 private String cuenta_bancaria;
 
@@ -43,6 +44,13 @@ public int getEdad() {
 public void setEdad(int edad) {
     this.edad = edad;
 }
+public String getPais() {
+    return pais;
+}
+public void setPais(String pais) {
+    this.pais = pais;
+}
+
 
 public String getDireccion() {
     return direccion;
