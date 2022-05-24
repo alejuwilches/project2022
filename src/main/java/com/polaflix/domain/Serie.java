@@ -2,10 +2,12 @@ package com.polaflix.domain;
  
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 
 @Entity
-
+@Table(name = "serie")
 public class Serie {
 
     @Id
@@ -33,6 +35,9 @@ public class Serie {
         this.categoria = categoria;
         
     }
+
+    @OneToMany
+    private Capitulo capitulo;
 
     public int getId() {
         return this.id;

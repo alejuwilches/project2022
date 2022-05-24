@@ -1,11 +1,11 @@
 package com.polaflix.domain;
-
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "usuario")
 public class Usuario implements Serializable {
 @Id
 private Long id;
@@ -65,10 +65,6 @@ public String getCuentaBancaria() {
 public void setCuentaBancaria(String cuenta_bancaria) {
     this.cuenta_bancaria = cuenta_bancaria;
 }
-
-
-
-
 
     
 }

@@ -2,15 +2,18 @@ package com.polaflix.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "capitulo")
 public class Capitulo implements Serializable {
       
 
     @Id
-    private Long id;
-    private int numero;
+    private Long numero;
     private String tituloCapitulo;
     private String descripcion;
     private String enlace;
@@ -23,7 +26,7 @@ public class Capitulo implements Serializable {
     private Temporada temporada;
 
 
-    public Capitulo(int numero, String tituloCapitulo, String descripcion, String enlace, Serie serie, Temporada temporada){
+    public Capitulo(Long numero, String tituloCapitulo, String descripcion, String enlace, Serie serie, Temporada temporada){
         super();
         this.numero = numero;
         this.tituloCapitulo = tituloCapitulo;
@@ -35,17 +38,8 @@ public class Capitulo implements Serializable {
     }
 
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public Integer getNumero() {
+    public long getNumero() {
         return this.numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
     }
 
     public String getTituloCapitulo() {
@@ -80,7 +74,5 @@ public class Capitulo implements Serializable {
         this.duracion = duracion;
     }
     
-
-
     
 }

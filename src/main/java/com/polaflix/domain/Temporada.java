@@ -8,8 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Temporada implements Serializable{
+    
     @Id
     private int id;
+    
     
     
 
